@@ -8,7 +8,7 @@ connectToMongo();
 
 const app = express()
 
-app.use(cors())
+app.use(cors("https://i-notebook-opal.vercel.app"));
 
 const port = process.env.PORT;
 
