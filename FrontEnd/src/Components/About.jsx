@@ -3,7 +3,7 @@ import noteContext from "../Context/Notes/noteContext";
 import "../style/about.css";
 import { useNavigate } from "react-router-dom";
 
-const HOST = import.meta.env.BASE_URL || "";
+const HOST = import.meta.env.BASE_URL;
 function About_user() {
   const [profile,setProfile]=useState({name:"",email:""})
   const navigate=useNavigate();

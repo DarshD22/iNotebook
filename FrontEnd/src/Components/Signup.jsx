@@ -3,7 +3,7 @@ import noteContext from "../Context/Notes/noteContext";
 import "../style/Signup.css";
 import { useNavigate } from "react-router-dom";
 
-const HOST = import.meta.env.BASE_URL || "";
+const HOST = import.meta.env.BASE_URL;
 function Signup() {
   const navigate=useNavigate();
   const {setAlert}=useContext(noteContext)

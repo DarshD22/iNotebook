@@ -2,7 +2,7 @@ import React, { useState ,useContext} from "react";
 import noteContext from "../Context/Notes/noteContext";
 import { useNavigate } from "react-router-dom";
 
-const HOST = import.meta.env.BASE_URL || "";
+const HOST = import.meta.env.BASE_URL;
 const Login = (props) => {
   const {setAlert}=useContext(noteContext)
   const [credentials, setCredentials] = useState({ email: "", password: "" });

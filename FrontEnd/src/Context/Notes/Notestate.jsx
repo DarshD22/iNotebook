@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
-  const host = import.meta.env.BASE_URL || "";
+  const host = import.meta.env.BASE_URL;
   const notesArray = [];
 
   const [notes, setState] = useState(notesArray);
