@@ -1,0 +1,10 @@
+
+.error-focused:focus {
+    border: 1px solid red;
+    background-color: #ffeeee; /* Light red background */
+}
+.okay-focused:focus {
+    border: 1px solid rgb(98, 255, 25);
+    background-color: #b8ffb7; /* Light red background */
+}
+  
