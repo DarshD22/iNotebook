@@ -3,6 +3,7 @@ import noteContext from "../Context/Notes/noteContext";
 import "../style/Signup.css";
 import { useNavigate } from "react-router-dom";
 
+const HOST = import.meta.env.BASE_URL || "";
 function Signup() {
   const navigate=useNavigate();
   const {setAlert}=useContext(noteContext)
@@ -17,7 +18,7 @@ function Signup() {
 
   const saveCred = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/createuser", {
+      const response = await fetch(`${HOST}/api/auth/createuser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

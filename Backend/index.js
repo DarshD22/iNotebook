@@ -1,13 +1,15 @@
 const connectToMongo=require('./db');
 const express = require('express')
 var cors = require('cors')
+import "dotenv/config";
+
 connectToMongo();
 
 const app = express()
 
 app.use(cors())
 
-const port = 5000
+const port = process.env.PORT;
 
 //For every request that comes in, make sure you use this translator (express.json()) to understand any JSON data in the request
 app.use(express.json())

@@ -3,6 +3,7 @@ import noteContext from "../Context/Notes/noteContext";
 import "../style/about.css";
 import { useNavigate } from "react-router-dom";
 
+const HOST = import.meta.env.BASE_URL || "";
 function About_user() {
   const [profile,setProfile]=useState({name:"",email:""})
   const navigate=useNavigate();
@@ -15,7 +16,7 @@ function About_user() {
     }
   }, []);
   const hadleDetails= async ()=>{
-    const response=await fetch("http://localhost:5000/api/auth/getuser",{
+    const response=await fetch(`${HOST}/api/auth/getuser`,{
       method: "POST",
       headers: {
                                                                

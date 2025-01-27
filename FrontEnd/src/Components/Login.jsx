@@ -2,13 +2,14 @@ import React, { useState ,useContext} from "react";
 import noteContext from "../Context/Notes/noteContext";
 import { useNavigate } from "react-router-dom";
 
+const HOST = import.meta.env.BASE_URL || "";
 const Login = (props) => {
   const {setAlert}=useContext(noteContext)
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let history=useNavigate();
 
   const handleSubmit = async () => {
-    const response = await fetch("http://localhost:5000/api/auth/login", {
+    const response = await fetch(`${HOST}/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
